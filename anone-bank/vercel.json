@@ -1,0 +1,29 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/home",
+      "statusCode": 302
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/home",
+      "destination": "/home.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/signup.html"
+    },
+    {
+      "source": "/support",
+      "destination": "/support.html"
+    }
+  ]
+}

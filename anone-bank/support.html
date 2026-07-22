@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anone - Customer Care</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-shell support-shell">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <p class="eyebrow">Customer Care</p>
+          <h1>We’re here to help</h1>
+          <p>For any complaints, account issues, investment concerns, or support requests, contact our professional team.</p>
+        </div>
+
+        <div class="support-box">
+          <p><strong>Response Time:</strong> Typically within 1 business day</p>
+          <p><strong>Support Hours:</strong> 24/7 for urgent account concerns</p>
+        </div>
+
+        <form id="support-form" class="auth-form">
+          <label for="support-name">Name</label>
+          <input type="text" id="support-name" placeholder="Your name" required />
+
+          <label for="support-email">Email Address</label>
+          <input type="email" id="support-email" placeholder="you@example.com" required />
+
+          <label for="support-message">Describe your concern</label>
+          <textarea id="support-message" rows="5" placeholder="Tell us how we can assist you." required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <div id="support-success" class="success-card" hidden>
+          <h2>Ticket submitted successfully</h2>
+          <p>Your request has been logged with our customer care team and prepared for delivery to our support mailbox.</p>
+          <p id="ticket-number" class="ticket-number"></p>
+          <p id="support-hint" class="support-hint"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="support.js"></script>
+  </body>
+</html>

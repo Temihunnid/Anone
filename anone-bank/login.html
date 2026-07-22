@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anone - Bank & Investment Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-body">
+    <div class="auth-shell">
+      <div class="auth-card">
+        <div class="auth-brand">
+          <p class="eyebrow">Secure Access</p>
+          <h1>Welcome to Anone</h1>
+          <p>Sign in to manage your banking balance, withdrawals, and investment portfolio from one place.</p>
+        </div>
+
+        <form id="login-form" class="auth-form">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" required />
+
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+
+          <button type="submit">Sign In</button>
+          <p class="auth-hint"><a class="ghost-link" href="signup.html">Create an account</a></p>
+          <p class="auth-hint"><a class="ghost-link" href="support.html">Contact customer care</a></p>
+          <p class="auth-hint">Demo mode: use any email and password to continue.</p>
+        </form>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
